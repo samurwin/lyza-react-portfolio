@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 
-function PhotoList(props) {
-    const { category } = props
+function PhotoList({ category }) {
     const [photos] = useState([
         {
           name: 'Grocery aisle',
@@ -107,7 +106,7 @@ function PhotoList(props) {
             <div className='flex-row'>
                 {currentPhotos.map((image, i) => (
                     <img
-                        src={require(`../../assets/small/${category}/${i}.jpg`).default}
+                        src={require(`../../assets/small/${category}/${i}.jpg`)}
                         alt={image.name}
                         className='img-thumbnail mx-1'
                         key={image.name}
